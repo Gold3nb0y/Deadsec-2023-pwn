@@ -1,0 +1,1 @@
+gcc -g -Wl,-z,relro,-z,now -o one_punch -fno-stack-protector one_punch.c

@@ -1,0 +1,7 @@
+FROM ubuntu:22.04
+
+CMD apt update && apt install -y gcc
+COPY one_punch.c /
+CMD gcc -g -Wl,-z,relro,-z,now -o one_punch -fno-stack-protector /one_punch.c
+
+
